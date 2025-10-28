@@ -1,0 +1,8 @@
+C:\Users\ACER\source\repos\APIApp\APIApp\obj\Debug\net10.0\APIApp.csproj.AssemblyReference.cache
+C:\Users\ACER\source\repos\APIApp\APIApp\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\ACER\source\repos\APIApp\APIApp\obj\Debug\net10.0\APIApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\source\repos\APIApp\APIApp\obj\Debug\net10.0\APIApp.AssemblyInfoInputs.cache
+C:\Users\ACER\source\repos\APIApp\APIApp\obj\Debug\net10.0\APIApp.AssemblyInfo.cs
+C:\Users\ACER\source\repos\APIApp\APIApp\obj\Debug\net10.0\APIApp.csproj.CoreCompileInputs.cache
+C:\Users\ACER\source\repos\APIApp\APIApp\obj\Debug\net10.0\APIApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ACER\source\repos\APIApp\APIApp\obj\Debug\net10.0\APIApp.MvcApplicationPartsAssemblyInfo.cache
