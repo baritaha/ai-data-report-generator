@@ -1,4 +1,5 @@
 using APIApp.Data;
+using APIApp.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Add HttpClient for Ollama
+builder.Services.AddHttpClient<IOllamaService, OllamaService>();
+
+// Register services
+builder.Services.AddScoped<IFileParserService, FileParserService>();
+builder.Services.AddScoped<IPdfService, PdfService>();
+
 // Add CORS for Angular
 builder.Services.AddCors(options =>
 {
@@ -24,6 +32,9 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
+
+// Add logging
+builder.Services.AddLogging();
 
 var app = builder.Build();
 

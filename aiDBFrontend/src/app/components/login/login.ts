@@ -40,7 +40,7 @@ export class Login {
         // Save user to localStorage and update auth state
         this.authService.setCurrentUser(response.user);
         // Redirect to dashboard
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/report-generator']);
         this.isLoading = false;
       },
       error: (error) => {

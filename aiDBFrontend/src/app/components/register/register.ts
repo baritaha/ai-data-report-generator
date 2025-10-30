@@ -56,7 +56,7 @@ export class Register {
         // Auto-login after successful registration
         this.authService.setCurrentUser(user);
         // Redirect to dashboard
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/login']);
         this.isLoading = false;
       },
       error: (error) => {

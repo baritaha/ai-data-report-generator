@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACER\\source\\repos\\APIApp\\APIApp\\APIApp.csproj": {}
+    "C:\\Users\\USER\\OneDrive\\Desktop\\ai-data-report-generator\\APIApp\\APIApp\\APIApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER\\source\\repos\\APIApp\\APIApp\\APIApp.csproj": {
+    "C:\\Users\\USER\\OneDrive\\Desktop\\ai-data-report-generator\\APIApp\\APIApp\\APIApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\APIApp\\APIApp\\APIApp.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\OneDrive\\Desktop\\ai-data-report-generator\\APIApp\\APIApp\\APIApp.csproj",
         "projectName": "APIApp",
-        "projectPath": "C:\\Users\\ACER\\source\\repos\\APIApp\\APIApp\\APIApp.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\source\\repos\\APIApp\\APIApp\\obj\\",
+        "projectPath": "C:\\Users\\USER\\OneDrive\\Desktop\\ai-data-report-generator\\APIApp\\APIApp\\APIApp.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USER\\OneDrive\\Desktop\\ai-data-report-generator\\APIApp\\APIApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -50,6 +50,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -73,6 +77,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [

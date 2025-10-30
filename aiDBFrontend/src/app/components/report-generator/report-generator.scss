@@ -1,0 +1,218 @@
+// Variables
+$primary-color: #4361ee;
+$secondary-color: #3f37c9;
+$success-color: #4cc9f0;
+$danger-color: #f72585;
+$light-bg: #f8f9fa;
+$border-color: #e9ecef;
+$text-muted: #6c757d;
+
+// Main container
+.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+// Card styling
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.card-header {
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: white;
+  border-radius: 12px 12px 0 0 !important;
+  padding: 1.5rem;
+
+  h3, h4 {
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+// Form elements
+.form-label {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+  border: 2px solid $border-color;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 0 0.2rem rgba(67, 97, 238, 0.25);
+  }
+
+  &:disabled {
+    background-color: $light-bg;
+    opacity: 0.7;
+  }
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-text {
+  color: $text-muted;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+// Progress bar
+.progress {
+  height: 8px;
+  border-radius: 10px;
+  background-color: $light-bg;
+  overflow: hidden;
+
+  .progress-bar {
+    background: linear-gradient(90deg, $success-color, $primary-color);
+    border-radius: 10px;
+    transition: width 0.4s ease;
+  }
+}
+
+// Buttons
+.btn {
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+
+  &-primary {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    
+    &:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(67, 97, 238, 0.4);
+    }
+  }
+
+  &-secondary {
+    background: #6c757d;
+    
+    &:hover:not(:disabled) {
+      background: #5a6268;
+      transform: translateY(-1px);
+    }
+  }
+
+  &-success {
+    background: linear-gradient(135deg, #4cc9f0, #4895ef);
+    
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(76, 201, 240, 0.4);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+// Alert
+.alert {
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+
+  &-danger {
+    background: linear-gradient(135deg, #f72585, #b5179e);
+    color: white;
+  }
+}
+
+// Report content
+.report-content {
+  background: $light-bg;
+  border-radius: 8px;
+  padding: 1.5rem;
+
+  h5 {
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  .report-body {
+    line-height: 1.6;
+    
+    // Style potential HTML content in the report
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    strong {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .d-flex.gap-2 {
+    flex-direction: column;
+  }
+}
+
+// Animation for progress text
+.text-center {
+  color: $text-muted;
+  font-weight: 500;
+}
+
+// File upload area enhancement
+input[type="file"] {
+  &::file-selector-button {
+    background: $primary-color;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    margin-right: 1rem;
+    transition: background 0.3s ease;
+    
+    &:hover {
+      background: $secondary-color;
+    }
+  }
+}

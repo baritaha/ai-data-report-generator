@@ -1,0 +1,85 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h3>AI Data Report Generator</h3>
+        </div>
+        <div class="card-body">
+          <!-- File Upload Section -->
+          <div class="mb-4">
+            <label class="form-label">Upload Data File (CSV/Excel)</label>
+            <input type="file" class="form-control" (change)="onFileSelected($event)" 
+                   accept=".csv,.xlsx,.xls" [disabled]="isGenerating">
+            <div class="form-text">Supported formats: CSV, Excel (.xlsx, .xls)</div>
+          </div>
+
+          <!-- Report Type Selection -->
+          <div class="mb-3">
+            <label class="form-label">Report Type</label>
+            <select class="form-select" formControlName="reportType" [disabled]="isGenerating">
+              <option value="summary">Data Summary</option>
+              <option value="analysis">Detailed Analysis</option>
+              <option value="insights">Key Insights</option>
+              <option value="trends">Trend Analysis</option>
+            </select>
+          </div>
+
+          <!-- Prompt Input -->
+          <div class="mb-3">
+            <label class="form-label">Analysis Prompt</label>
+            <textarea class="form-control" formControlName="prompt" rows="4" 
+                      placeholder="Describe what kind of report you want. Example: 'Analyze sales trends and provide key insights about top performing products'"
+                      [disabled]="isGenerating"></textarea>
+            <div class="form-text">Be specific about what you want to analyze in your data</div>
+          </div>
+
+          <!-- Progress Bar -->
+          <div *ngIf="isGenerating" class="mb-3">
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                   [style.width]="uploadProgress + '%'">
+                {{ uploadProgress }}%
+              </div>
+            </div>
+            <div class="text-center mt-2">Generating report... This may take a moment.</div>
+          </div>
+
+          <!-- Error Message -->
+          <div *ngIf="errorMessage" class="alert alert-danger">
+            {{ errorMessage }}
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary" (click)="generateReport()" 
+                    [disabled]="isGenerating || !selectedFile">
+              Generate Report
+            </button>
+            <button class="btn btn-secondary" (click)="clearForm()" 
+                    [disabled]="isGenerating">
+              Clear
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Generated Report Display -->
+      <div *ngIf="generatedReport" class="card mt-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h4>Generated Report</h4>
+          <button class="btn btn-success" (click)="downloadPdf()">
+            Download PDF
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="report-content">
+            <h5>{{ generatedReport.title }}</h5>
+            <p class="text-muted">Generated on: {{ getFormattedDate() }}</p>
+            <div class="report-body" [innerHTML]="generatedReport.content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
