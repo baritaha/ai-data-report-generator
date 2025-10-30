@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user';
+import { UserRole } from '../../models/user';
 
 @Component({
   selector: 'app-register',
@@ -13,9 +14,11 @@ import { User } from '../../models/user';
   styleUrl: './register.scss'
 })
 export class Register {
+UserRole = UserRole;
   registerData: User & { confirmPassword: string } = {
     userName: '',
     email: '',
+    role:UserRole.USER,
     password: '',
     confirmPassword: ''
   };

@@ -31,7 +31,18 @@
           placeholder="Enter your email"
         >
       </div>
-
+<div class="form-group role-select">
+  <label for="role">Role</label>
+  <select
+    id="role"
+    name="role"
+    [(ngModel)]="registerData.role"
+    required
+  >
+    <option [ngValue]="UserRole.USER">User</option>
+    <option [ngValue]="UserRole.ADMIN">Admin</option>
+  </select>
+</div>
       <div class="form-group">
         <label for="password">Password</label>
         <input

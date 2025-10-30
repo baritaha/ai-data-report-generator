@@ -170,3 +170,28 @@
     padding: 1.5rem;
   }
 }
+.role-select {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.role-select label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.role-select select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.role-select select:focus {
+  border-color: #007bff;
+  outline: none;
+}

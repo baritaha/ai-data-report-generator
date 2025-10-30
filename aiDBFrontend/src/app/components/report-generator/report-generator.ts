@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReportService } from '../../services/report.service';
 import { HttpEventType } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-report-generator',
   templateUrl: './report-generator.html',
-  styleUrls: ['./report-generator.scss']
+  styleUrls: ['./report-generator.scss'],
+  imports:[CommonModule]
 })
 export class ReportGenerator implements OnInit {
   reportForm: FormGroup;
